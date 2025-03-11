@@ -1,2 +1,2 @@
 # Site curriculo
- exemplo de site curriculo para atividade acadêmica
+ exemplo de site currículo para atividade acadêmica
