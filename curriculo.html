@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src="https://kit.fontawesome.com/c8de44c573.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
     </head>
 
     <body>
@@ -93,7 +94,7 @@
           <br>
           <br>
 
-          <div class="tabs is-toggle is-toggle-rounded is-centered">
+          <div class="tabs is-toggle is-toggle-rounded is-centered ">
             <ul>
               <li class="is-active" data-target="formacao">
                 <a>
@@ -121,48 +122,348 @@
               </li>
             </ul>
           </div>
-<box></box>
+<br>
+<br>
         <div id="tab-content">
           <div id = "formacao">
-<a>jsdajhfsdjksdhjkfsda</a>
+            <div id="IFC" class="columns is-desktop">
+              <div class="column">
+                <style> 
+                  #imgs {
+                    position: relative;
+                    animation: mymove 1s, fadeInAnimation ease 2s;
+                  }
+                  @keyframes mymove {
+                    from {left: -50px;}
+                    to {left: 0px;}
+                  }
+                  @keyframes fadeInAnimation {
+                      0% {
+                          opacity: 0.1;
+                      }
+                      100% {
+                          opacity: 1;
+                      }
+                  }
+
+                  #imgs2 {
+                    position: relative;
+                    animation: mymoves 1s, fadeInAnimation ease 2s;
+                  }
+                  @keyframes mymoves {
+                    from {left: 50px;}
+                    to {left: 0px;}
+                  }
+                  @keyframes fadeInAnimation {
+                      0% {
+                          opacity: 0.1;
+                      }
+                      100% {
+                          opacity: 1;
+                      }
+                  }
+                  </style>
+                  <script>
+
+                  </script>
+                  <br>
+                  <br>
+                <figure id="imgs"class="column">
+                <img src="jifc.jpg" class="teste" style="width: 256px; height: 256px; border-radius: 15%; margin-left: 20px;">
+                <img src="ifc.jpeg" class="teste" style="width: 256px; height: 256px; border-radius: 15%; margin-left: 50px;">
+                </figure>
+              </div>
+              <div class="column  has-background-link has-text-white has-text-justified box" style="margin-right: 20px;">
+                <p style="font-size: 35px;font-weight: bold;">
+                  Análise e desenvolvimento de sistemas
+                </p>
+                <p style="font-size: 15px;">Ensino superior</p>
+                <br>
+                <div class="column box">
+                  <div class="row has-text-centered has-text-link">
+                    2024 - Atualmente
+                  </div>
+                  <br>
+                  <div class="row"> O Instituto Federal Catarinense – Campus Fraiburgo oferece
+                    o curso de Análise e Desenvolvimento de Sistemas,
+                    no qual são desenvolvidas habilidades em programação,
+                    banco de dados e desenvolvimento de software.
+                  </div>
+                  <br>
+
+                  <br>
+                  <div class="row">
+                    Com uma base sólida adquirida em um curso anterior na área,
+                    a futura formação no IFC Fraiburgo aprimora ainda mais o conhecimento técnico,
+                    preparando para os desafios do mercado de tecnologia.
+                  </div>
+              </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="ETEC" class="columns is-desktop">
+              <div class="column" style="margin-left: 20px;">
+                <br>
+                <div class="column has-background-link has-text-white has-text-justified box">
+                  <P style="font-size: 35px;font-weight: bold;">ETEC Prof. Carmine Biagio Tundisi</P>
+                  <p style="font-size: 15px;">Ensino médio com técnico integrado</p>
+                </div>
+                
+                <div class="column box">
+                  <div class="row has-text-centered has-text-link">
+                    2019 - 2023
+                  </div>
+                  <br>
+                  <div class="row"> As Escolas técnicas estaduais oferecem o ensino médio com uma habilitação técniva
+                    em análise e desenvolvimento de sistemas, durante o ensino médio é ofertado aos alunos a introdução
+                    as matérias técnicas, desenvolvendo sites e aplicativos já podendo ingressar no mercado de trabalho
+                    após a conclusão do ensino médio integrado.
+                  </div>
+                  <br>
+                  <br>
+              </div>
+              </div>
+
+              <div class="column">
+                <figure id="imgs2"class="column">
+                  <img src="etec.jpg" class="teste" style="width: 576px; height: 356px; border-radius: 15%; margin-left: 20px;">
+                  </figure>
+              </div>
+
+            </div>
+
+            <style>
+              .carousel {
+              height: 450px;
+              margin: 0;
+              display: grid;
+              grid-template-rows: 400px 100px;
+              grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+              align-items: center;
+              justify-items: center;
+            }
+
+            main#carousel {
+              grid-row: 1 / 2;
+              grid-column: 1 / 8;
+              width: 100vw;
+              height: 300px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              transform-style: preserve-3d;
+              perspective: 400px;
+              --items: 5;
+              --middle: 3;
+              --position: 1;
+              pointer-events: none;
+            }
+
+            div.item {
+              border-radius: 10%;
+              position: absolute;
+              border-color: white;
+              border-width: 15%;
+              width: 300px;
+              height: 300px;
+              background-color: #3173dd;
+              --r: calc(var(--position) - var(--offset));
+              --abs: max(calc(var(--r) * -1), var(--r));
+              transition: all 0.25s linear;
+              transform: rotateY(calc(-10deg * var(--r)))
+                translateX(calc(-300px * var(--r)));
+              z-index: calc((var(--position) - var(--abs)));
+            }
+
+            div.item:nth-of-type(1) {
+              --offset: 1;
+            }
+            div.item:nth-of-type(2) {
+              --offset: 2;
+            }
+            div.item:nth-of-type(3) {
+              --offset: 3;
+            }
+            div.item:nth-of-type(4) {
+              --offset: 4;
+            }
+            div.item:nth-of-type(5) {
+              --offset: 5;
+            }
+
+            input:nth-of-type(1) {
+              grid-column: 2 / 3;
+              grid-row: 2 / 3;
+            }
+            input:nth-of-type(1):checked ~ main#carousel {
+              --position: 1;
+            }
+
+            input:nth-of-type(2) {
+              grid-column: 3 / 4;
+              grid-row: 2 / 3;
+            }
+            input:nth-of-type(2):checked ~ main#carousel {
+              --position: 2;
+            }
+
+            input:nth-of-type(3) {
+              grid-column: 4 /5;
+              grid-row: 2 / 3;
+            }
+            input:nth-of-type(3):checked ~ main#carousel {
+              --position: 3;
+            }
+
+            input:nth-of-type(4) {
+              grid-column: 5 / 6;
+              grid-row: 2 / 3;
+            }
+            input:nth-of-type(4):checked ~ main#carousel {
+              --position: 4;
+            }
+
+            input:nth-of-type(5) {
+              grid-column: 6 / 7;
+              grid-row: 2 / 3;
+            }
+            input:nth-of-type(5):checked ~ main#carousel {
+              --position: 5;
+            }
+            </style>
+            <br>
+            <br>
+            <div class="columns is-mobile">
+              <div class="column is-centered is-half box is-offset-one-quarter has-background-link">
+                <p class="has-background-white box has-text-justified">
+                  O curso oferece um aprendizado acurado e aprovado por diversos portais de ensino,
+                  no qual se é apresentado um trabalho conclusivo do curso, demonstrando habilidades
+                  desenvolvidas durante o curso, apresentado a uma banca e apresentação formal à instituição
+                </p>
+              </div>
+            </div>
+ 
+            <div class="carousel">
+              <input type="radio" name="position" checked />
+              <input type="radio" name="position" />
+              <input type="radio" name="position" />
+              <input type="radio" name="position" />
+              <input type="radio" name="position" />
+              
+              <main id="carousel">
+                <div class="item"><div class="column is-centered"><img src="grupofalando.jpeg" style="width: 280px;height: 280px;border-radius: 10%;"></div></div>
+                <div class="item"><div class="column is-centered"><img src="grupotcc.jpeg" style="width: 280px;height: 280px;border-radius: 10%;"></div></div>
+                <div class="item"><div class="column is-centered"><img src="rammetapresentando.jpeg" style="width: 280px;height: 280px;border-radius: 10%;"></div></div>
+                <div class="item"><div class="column is-centered"><img src="grupocapa.jpeg" style="width: 280px;height: 280px;border-radius: 10%;"></div></div>
+                <div class="item"><div class="column is-centered"><img src="grupoprepara.jpeg" style="width: 280px;height: 280px;border-radius: 10%;"></div></div>
+                <main>
+                </div>
+
+
+            <div id="microcamp"></div>
           </div>
 
           <div id = "experiencias" class="is-hidden">
-            <a>j</a>
+            <div id="sala_solutions"></div>
+            <div id="logos"></div>
+            <div id="dresch"></div>
           </div>
 
           <div id = "habilidades" class="is-hidden">
-            <a>jsdajhdhjkfsda</a>
+            
           </div>
 
           <div id = "sobre_mim" class="is-hidden">
-            <a>jsd</a>
+            <div class="columns is-desktop">
+              <div class="column" style="margin-left: 20px;">
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img
+                        src="eu.jpg"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-48x48">
+                          <img
+                            src="teste.jpg"
+                            alt="Placeholder image"
+                            style="height: 48px;width: 48px;"
+                          />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <p class="title is-4">João Pedro Gonçalves de Aquino</p>
+                        <p class="subtitle is-6">@joao_pedro.psd</p>
+                      </div>
+                    </div>
+                
+                    <div class="content">
+                      Técnico em análise e desenvolvimento de sistemas pela ETEC
+                      <br />
+                      <time datetime="2016-1-1">04 janeiro 2004 - 21 anos</time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="column box has-background-link" style="margin-right: 20px;">
+                <p class="has-text-white" style="font-weight: bold;font-size: 35px;">Sobre mim</p>
+                <div class="box has-text-justified">
+                  Sou apaixonado por tecnologia e desenvolvimento, sempre em busca de novos
+                  desafios e aprendizados. Minha jornada na computação começou com um curso
+                  técnico em Análise e Desenvolvimento de Sistemas pela ETEC, aliado por um
+                  curso de informática na Microcamp, onde aprimorei minhas habilidades em 
+                  design digital e programação front-end para sites com alguns frameworks.
+                  <br>
+                  <br>
+                  Minha afinidade com programação me levou a aprofundar conhecimentos em diversas linguagens,
+                  com um foco especial no desenvolvimento front-end. Gosto de criar interfaces intuitivas e dinâmicas,
+                  combinando código e design para proporcionar experiências confortáveis aos usuários.
+                  <br>
+                  <br>
+                  Buscando crescer ainda mais na área, saí de São Paulo e vim para Santa
+                  Catarina para continuar meus estudos. Atualmente, sigo explorando novas
+                  tecnologias e expandindo meu conhecimento para me tornar um profissional
+                  cada vez mais completo no mundo da programação.
+                </div>
+                </div>
+                <div class="box" style="margin-right: 20px;"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <script>
-            const tabs = document.querySelectorAll(".tabs li");
-            const tabContentBoxes = document.querySelectorAll("#tab-content > div");
+          const tabs = document.querySelectorAll(".tabs li");
+          const tabContentBoxes = document.querySelectorAll("#tab-content > div");
 
-            tabs.forEach((tab) => {
-                tab.addEventListener("click",()=>{
-                    tabs.forEach(item => item.classList.remove("is-active"))
-                    tab.classList.add("is-active");
+          tabs.forEach((tab) => {
+              tab.addEventListener("click",()=>{
+                  tabs.forEach(item => item.classList.remove("is-active"))
+                  tab.classList.add("is-active");
 
-            const target = tab.dataset.target;
+          const target = tab.dataset.target;
 
-            tabContentBoxes.forEach(box =>{
-                if(box.getAttribute("id") === target){
-                    box.classList.remove("is-hidden");
-                }else{
-                    box.classList.add("is-hidden");
-                }
-            }) 
+          tabContentBoxes.forEach(box =>{
+              if(box.getAttribute("id") === target){
+                  box.classList.remove("is-hidden");
+              }else{
+                  box.classList.add("is-hidden");
+              }
+          }) 
 
-                })
-            })
+              })
+          })
 
-        </script>
-
+      </script>
     </body>
 </html>
