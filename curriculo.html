@@ -173,11 +173,11 @@
                 <img src="ifc.jpeg" class="teste" style="width: 256px; height: 256px; border-radius: 15%; margin-left: 50px;">
                 </figure>
               </div>
-              <div class="column  has-background-link has-text-white has-text-justified box" style="margin-right: 20px;">
+              <div class="column  has-background-link has-text-white has-text-justified box" style="margin-right: 20px;" id="boxinfome">
                 <p style="font-size: 35px;font-weight: bold;">
                   Análise e desenvolvimento de sistemas
                 </p>
-                <p style="font-size: 15px;">Ensino superior</p>
+                <p style="font-size: 15px;">Ensino superior <i class="fa-solid fa-building-columns" style="color: #ffffff;"></i></p>
                 <br>
                 <div class="column box">
                   <div class="row has-text-centered has-text-link">
@@ -209,12 +209,12 @@
                 <br>
                 <div class="column has-background-link has-text-white has-text-justified box">
                   <P style="font-size: 35px;font-weight: bold;">ETEC Prof. Carmine Biagio Tundisi</P>
-                  <p style="font-size: 15px;">Ensino médio com técnico integrado</p>
+                  <p style="font-size: 15px;">Ensino médio com técnico integrado <i class="fa-solid fa-school-flag" style="color: #ffffff;"></i></p>
                 </div>
                 
                 <div class="column box">
                   <div class="row has-text-centered has-text-link">
-                    2019 - 2023
+                    2019 - 2023 <i class="fa-solid fa-user-graduate"></i>
                   </div>
                   <br>
                   <div class="row"> As Escolas técnicas estaduais oferecem o ensino médio com uma habilitação técniva
@@ -374,12 +374,118 @@
           </div>
 
           <div id = "habilidades" class="is-hidden">
-            
+            <style>
+              #boxlogos{
+                position: relative;
+                animation: mymovelogo 1s, fadeInAnimationlogo ease 2s;
+              }
+                  @keyframes mymovelogo {
+                    from {bottom: -50px;}
+                    to {bottom: 0px;}
+                  }
+                  @keyframes fadeInAnimationlogo {
+                      0% {
+                          opacity: 0.1;
+                      }
+                      100% {
+                          opacity: 1;
+                      }
+                  }
+
+              .logos-slide {
+                display: inline-block;
+                animation: 35s slide infinite linear;
+              }
+              @keyframes slide {
+              from {
+                transform: translateX(0);
+              }
+              to {
+                transform: translateX(-100%);
+              }
+            }
+            .logos {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 60px 0;
+            background-color: #FFFFFF;
+          }
+            </style>
+            <div class="columns">
+              <div class="column"></div>
+              <div class="column is-centered is-four-fifths box" id="boxlogos">
+
+                <div>
+                  <p class="title is-3 has-text-centered">Tecnologias conhecidas</p>
+                </div>
+                <div class="logos">
+                <div class="logos-slide">
+                  <img src="html.png" style="width: 48px; height: 48px; margin: 0 15px;">
+                  <img src="css.png" style="width: 33px; height: 48px;margin: 0 15px;">
+                  <img src="java.png" style="width: 33px; height: 48px; margin: 0 15px;">
+                  <img src="js.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="c.png" style="width: 43px; height: 48px;margin: 0 15px;">
+                  <img src="csharp.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="github.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="mysql.png" style="width: 68px; height: 48px;margin: 0 15px;">
+                  <img src="php.png" style="width: 68px; height: 48px;margin: 0 15px;">
+                  <img src="netbeans.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="visualcode.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="visualstudio.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                </div>
+                <div class="logos-slide">
+                  <img src="html.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="css.png" style="width: 33px; height: 48px;margin: 0 15px;">
+                  <img src="java.png" style="width: 33px; height: 48px;margin: 0 15px;">
+                  <img src="js.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="c.png" style="width: 43px; height: 48px;margin: 0 15px;">
+                  <img src="csharp.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="github.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="mysql.png" style="width: 68px; height: 48px;margin: 0 15px;">
+                  <img src="php.png" style="width: 68px; height: 48px;margin: 0 15px;">
+                  <img src="netbeans.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="visualcode.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                  <img src="visualstudio.png" style="width: 48px; height: 48px;margin: 0 15px;">
+                </div>
+              </div>
+              </div>
+              <div class="column">
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="columns is-desktop" style="margin: 0 90px 0 90px;">
+              <div class="column is-half box has-background-link" id="boxinfome">
+                <p class="title is-4 has-text-white">Design digital <i class="fa-solid fa-pen"></i></p>
+                <div class="columns">
+                <div class="column box" style="margin: 0 5px 5px 5px;">
+                  <img src="adobe.png">
+                </div>
+                <div class="column box" style="margin: 0 5px 5px 5px;">
+                  <img src="corel.png" alt="">
+                </div>
+              </div>
+              </div>
+              <div class="column box" style="margin: 0 20px 0 20px;" id="boxinfome">
+                <img src="anim.png" style="width: 48px; height: 48px;">
+                <img src="aftereffects.png" style="width: 38px; height: 38px;">
+                <img src="photoshop.png" style="width: 68px; height: 68px;">
+                <img src="muse.png" style="width: 28px; height: 28px;">
+                <img src="illustrator.png" style="width: 88px; height: 88px;">
+                <img src="premiere.png" style="width: 48px; height: 48px;">
+              </div>
+              <div class="column box" id="boxinfome">
+                <img src="coreldraw.png" style="width: 88px; height: 88px;">
+                <img src="corelfont.png" style="width: 38px; height: 38px;">
+                <img src="corelcapture.png" style="width: 48px; height: 48px;">
+                <img src="corelphoto.png" style="width: 68px; height: 68px;">
+              </div>
+            </div>
           </div>
 
           <div id = "sobre_mim" class="is-hidden">
             <div class="columns is-desktop">
-              <div class="column" style="margin-left: 20px;">
+              <div class="column" style="margin-left: 20px;" id="imgs">
                 <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
@@ -414,8 +520,27 @@
                   </div>
                 </div>
               </div>
+              <style>
+                #boxinfome{
+                  position: relative;
+                  animation: mymoveinfo 1s, fadeInAnimation ease 2s;
+                }
+                  @keyframes mymoveinfo {
+                    from {top: -50px;}
+                    to {top: 0px;}
+                  }
+                  @keyframes fadeInAnimationinfo {
+                      0% {
+                          opacity: 0.1;
+                      }
+                      100% {
+                          opacity: 1;
+                      }
+                  }
+
+              </style>
               <div class="column">
-                <div class="column box has-background-link" style="margin-right: 20px;">
+                <div class="column box has-background-link" style="margin-right: 20px;" id="boxinfome">
                 <p class="has-text-white" style="font-weight: bold;font-size: 35px;">Sobre mim</p>
                 <div class="box has-text-justified">
                   Sou apaixonado por tecnologia e desenvolvimento, sempre em busca de novos
